@@ -12,6 +12,16 @@ root.configure(bg="black")
 pygame.mixer.init()
 
 
+def start():
+    text = time.strftime("%I:%M:%S %p")
+    label.config(text=text)
+    label.after(1000, start)
+
+
+label = Label(root, font=("Helvetica", 24), bg="black", fg="cyan")
+label.grid(row=0, column=1)
+
+
 def play_sound():
     try:
         pygame.mixer.music.load("sunflower.mp3")
@@ -61,6 +71,8 @@ Entry(root, textvariable=second, bg="white", fg="black",).grid(row=3, column=2)
 Button(root, text='Set Alarm',
        command=actual_time, bg="green", fg="black",).grid(row=4, column=3)
 
+
+start()
 
 
 root.mainloop()
