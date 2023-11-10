@@ -62,15 +62,5 @@ Button(root, text='Set Alarm',
        command=actual_time, bg="green", fg="black",).grid(row=4, column=3)
 
 
-# def start():
-#     text = time.strftime("%I:%M:%S %p")
-#     Label.config(text=text)
-#     Label.after(1000, start)
-
-
-# Label = Label(root, font=("ds-digital", 100), bg="black", fg="cyan")
-# Label.grid(row=0, column=1)
-# print('done')
-# start()
 
 root.mainloop()
